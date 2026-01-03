@@ -201,7 +201,7 @@ For questions about this website or Cooperative Codebase services:
 
 ## 📄 License
 
-© 2025 Cooperative Codebase. All rights reserved.
+© 2026 Cooperative Codebase. All rights reserved.
 
 ---
 
