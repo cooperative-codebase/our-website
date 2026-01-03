@@ -130,7 +130,7 @@ pnpm dev
 
 Cooperative Codebase is dedicated to:
 
-- **Growing the cooperative ecosystem** in New Orleans
+- **Growing the cooperative ecosystem**
 - **Advancing cooperative economy** principles
 - **Ensuring fair distribution** of products and services
 - **Building software solutions** for cooperatives and political organizations
@@ -205,4 +205,4 @@ For questions about this website or Cooperative Codebase services:
 
 ---
 
-Built with ❤️ for the cooperative movement in New Orleans
+Built with ❤️ for the cooperative movement
