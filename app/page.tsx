@@ -1,9 +1,17 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { ContactFormReusable } from "@/components/ContactFormReusable"
-import { ArrowRight, CheckCircle, Users, Code, Globe, Shield, Zap } from "lucide-react"
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { ContactFormReusable } from "@/components/ContactFormReusable";
+import {
+  ArrowRight,
+  CheckCircle,
+  Users,
+  Code,
+  Globe,
+  Shield,
+  Zap,
+} from "lucide-react";
 
 export default function CooperativeCodebasePage() {
   return (
@@ -30,10 +38,30 @@ export default function CooperativeCodebasePage() {
             />
           </div>
           <div className="hidden md:flex space-x-8">
-            <a href="#services" className="text-slate-300 hover:text-white transition-colors">Services</a>
-            <a href="#about" className="text-slate-300 hover:text-white transition-colors">About</a>
-            <a href="#projects" className="text-slate-300 hover:text-white transition-colors">Projects</a>
-            <a href="#contact" className="text-slate-300 hover:text-white transition-colors">Contact</a>
+            <a
+              href="#services"
+              className="text-slate-300 hover:text-white transition-colors"
+            >
+              Services
+            </a>
+            <a
+              href="#about"
+              className="text-slate-300 hover:text-white transition-colors"
+            >
+              About
+            </a>
+            <a
+              href="#projects"
+              className="text-slate-300 hover:text-white transition-colors"
+            >
+              Projects
+            </a>
+            <a
+              href="#contact"
+              className="text-slate-300 hover:text-white transition-colors"
+            >
+              Contact
+            </a>
           </div>
         </div>
       </nav>
@@ -49,18 +77,22 @@ export default function CooperativeCodebasePage() {
               <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-blue-300 via-blue-400 to-cyan-300 bg-clip-text text-transparent">
                 Cooperative Codebase
               </h1>
-              
+
               {/* Description */}
               <p className="text-lg md:text-xl text-white mb-8 max-w-2xl mx-auto">
-                Empowering and growing the cooperative ecosystem in New Orleans
+                Empowering and growing the cooperative ecosystem
               </p>
-              
+
               {/* Button */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button 
-                  size="lg" 
+                <Button
+                  size="lg"
                   className="backdrop-blur-md bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 border border-blue-400/50 text-white px-8 py-4 text-lg shadow-xl hover:shadow-2xl transition-all duration-300 group"
-                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                  onClick={() =>
+                    document
+                      .getElementById("contact")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
                 >
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -79,7 +111,8 @@ export default function CooperativeCodebasePage() {
               Our Services
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              We specialize in creating custom software solutions that empower community organizations and cooperatives.
+              We specialize in creating custom software solutions that empower
+              community organizations and cooperatives.
             </p>
           </div>
 
@@ -89,9 +122,12 @@ export default function CooperativeCodebasePage() {
               <div className="backdrop-blur-md bg-blue-500/20 border border-blue-400/30 rounded-xl p-4 w-16 h-16 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-blue-500/30 group-hover:border-blue-400/50 group-hover:shadow-blue-500/50 transition-all duration-300">
                 <Users className="w-8 h-8 text-blue-400 group-hover:text-blue-300" />
               </div>
-              <h3 className="text-xl font-semibold mb-4 text-white group-hover:text-blue-100 transition-colors">Cooperative Management Systems</h3>
+              <h3 className="text-xl font-semibold mb-4 text-white group-hover:text-blue-100 transition-colors">
+                Cooperative Management Systems
+              </h3>
               <p className="text-slate-300 group-hover:text-slate-200 transition-colors mb-4">
-                Custom software for member management, democratic decision-making, and resource allocation
+                Custom software for member management, democratic
+                decision-making, and resource allocation
               </p>
               <ul className="text-slate-400 text-sm space-y-2">
                 <li>• Member portals and voting systems</li>
@@ -105,9 +141,12 @@ export default function CooperativeCodebasePage() {
               <div className="backdrop-blur-md bg-purple-500/20 border border-purple-400/30 rounded-xl p-4 w-16 h-16 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-purple-500/30 group-hover:border-purple-400/50 group-hover:shadow-purple-500/50 transition-all duration-300">
                 <Globe className="w-8 h-8 text-purple-400 group-hover:text-purple-300" />
               </div>
-              <h3 className="text-xl font-semibold mb-4 text-white group-hover:text-purple-100 transition-colors">Political Organization Tools</h3>
+              <h3 className="text-xl font-semibold mb-4 text-white group-hover:text-purple-100 transition-colors">
+                Political Organization Tools
+              </h3>
               <p className="text-slate-300 group-hover:text-slate-200 transition-colors mb-4">
-                Technology solutions for grassroots organizing, campaign management, and community engagement
+                Technology solutions for grassroots organizing, campaign
+                management, and community engagement
               </p>
               <ul className="text-slate-400 text-sm space-y-2">
                 <li>• Volunteer coordination systems</li>
@@ -121,9 +160,12 @@ export default function CooperativeCodebasePage() {
               <div className="backdrop-blur-md bg-green-500/20 border border-green-400/30 rounded-xl p-4 w-16 h-16 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-green-500/30 group-hover:border-green-400/50 group-hover:shadow-green-500/50 transition-all duration-300">
                 <Code className="w-8 h-8 text-green-400 group-hover:text-green-300" />
               </div>
-              <h3 className="text-xl font-semibold mb-4 text-white group-hover:text-green-100 transition-colors">Consulting & Strategy</h3>
+              <h3 className="text-xl font-semibold mb-4 text-white group-hover:text-green-100 transition-colors">
+                Consulting & Strategy
+              </h3>
               <p className="text-slate-300 group-hover:text-slate-200 transition-colors mb-4">
-                Strategic guidance for digital transformation and cooperative development
+                Strategic guidance for digital transformation and cooperative
+                development
               </p>
               <ul className="text-slate-400 text-sm space-y-2">
                 <li>• Technology roadmap planning</li>
@@ -150,24 +192,46 @@ export default function CooperativeCodebasePage() {
               <div className="max-w-4xl mx-auto">
                 <div>
                   <p className="text-slate-300 mb-6 text-center">
-                    We believe that technology should serve communities, not the other way around. Our team works closely with cooperatives, nonprofits, and community organizations to create software solutions that strengthen their impact and efficiency.
+                    We believe that technology should serve communities, not the
+                    other way around. Our team works closely with cooperatives,
+                    nonprofits, and community organizations to create software
+                    solutions that strengthen their impact and efficiency.
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="backdrop-blur-md bg-blue-500/10 border border-blue-400/20 rounded-xl p-6 hover:bg-blue-500/15 transition-all duration-300">
-                      <h4 className="text-xl font-semibold text-blue-300 mb-3">Grow Coop Ecosystem</h4>
-                      <p className="text-slate-300 text-sm leading-relaxed">Expanding and strengthening the cooperative network throughout New Orleans</p>
+                      <h4 className="text-xl font-semibold text-blue-300 mb-3">
+                        Grow Coop Ecosystem
+                      </h4>
+                      <p className="text-slate-300 text-sm leading-relaxed">
+                        Expanding and strengthening cooperative networks
+                      </p>
                     </div>
                     <div className="backdrop-blur-md bg-purple-500/10 border border-purple-400/20 rounded-xl p-6 hover:bg-purple-500/15 transition-all duration-300">
-                      <h4 className="text-xl font-semibold text-purple-300 mb-3">Advance Coop Economy</h4>
-                      <p className="text-slate-300 text-sm leading-relaxed">Promoting economic models that prioritize community ownership and democratic control</p>
+                      <h4 className="text-xl font-semibold text-purple-300 mb-3">
+                        Advance Coop Economy
+                      </h4>
+                      <p className="text-slate-300 text-sm leading-relaxed">
+                        Promoting economic models that prioritize community
+                        ownership and democratic control
+                      </p>
                     </div>
                     <div className="backdrop-blur-md bg-green-500/10 border border-green-400/20 rounded-xl p-6 hover:bg-green-500/15 transition-all duration-300">
-                      <h4 className="text-xl font-semibold text-green-300 mb-3">Fair Distribution</h4>
-                      <p className="text-slate-300 text-sm leading-relaxed">Ensuring equitable access to products, services, and opportunities for all</p>
+                      <h4 className="text-xl font-semibold text-green-300 mb-3">
+                        Fair Distribution
+                      </h4>
+                      <p className="text-slate-300 text-sm leading-relaxed">
+                        Ensuring equitable access to products, services, and
+                        opportunities for all
+                      </p>
                     </div>
                     <div className="backdrop-blur-md bg-cyan-500/10 border border-cyan-400/20 rounded-xl p-6 hover:bg-cyan-500/15 transition-all duration-300">
-                      <h4 className="text-xl font-semibold text-cyan-300 mb-3">Software Solutions</h4>
-                      <p className="text-slate-300 text-sm leading-relaxed">Building custom technology for cooperatives and political organizations</p>
+                      <h4 className="text-xl font-semibold text-cyan-300 mb-3">
+                        Software Solutions
+                      </h4>
+                      <p className="text-slate-300 text-sm leading-relaxed">
+                        Building custom technology for cooperatives and
+                        political organizations
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -185,7 +249,8 @@ export default function CooperativeCodebasePage() {
               Our Projects
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              Explore our work and see how we're building technology solutions for the cooperative ecosystem.
+              Explore our work and see how we're building technology solutions
+              for the cooperative ecosystem.
             </p>
           </div>
 
@@ -244,7 +309,7 @@ export default function CooperativeCodebasePage() {
               </div>
             </div>
             <p className="text-slate-400 mb-4">
-              Building technology for community empowerment in New Orleans
+              Building technology for community empowerment
             </p>
             <p className="text-slate-500 text-sm">
               © 2025 Cooperative Codebase. All rights reserved.
