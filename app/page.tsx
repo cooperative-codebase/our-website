@@ -312,7 +312,7 @@ export default function CooperativeCodebasePage() {
               Building technology for community empowerment
             </p>
             <p className="text-slate-500 text-sm">
-              © 2025 Cooperative Codebase. All rights reserved.
+              © 2026 Cooperative Codebase. All rights reserved.
             </p>
           </div>
         </div>
