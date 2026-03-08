@@ -1,7 +1,6 @@
-"use client"
-
 import { ContactFormReusable } from "@/components/ContactFormReusable"
 import { useState } from "react"
+import { Helmet } from "react-helmet-async"
 
 export default function VerifyPage() {
   const [testLog, setTestLog] = useState<string[]>([])
@@ -11,7 +10,15 @@ export default function VerifyPage() {
   }
 
   return (
-    <div className="container mx-auto py-8 px-4">
+    <>
+      <Helmet>
+        <title>Contact Form Test | Cooperative Codebase</title>
+        <meta name="description" content="Test the contact form." />
+        <meta property="og:title" content="Contact Form Test | Cooperative Codebase" />
+        <meta property="og:description" content="Test the contact form." />
+        <meta property="og:url" content="https://cooperativecodebase.com/verify" />
+      </Helmet>
+      <div className="container mx-auto py-8 px-4">
       <div className="max-w-2xl mx-auto">
         <h1 className="text-3xl font-bold text-center mb-8">
           Contact Form Test
@@ -127,5 +134,6 @@ export default function VerifyPage() {
         </div>
       </div>
     </div>
+    </>
   )
 } 

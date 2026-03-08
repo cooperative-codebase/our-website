@@ -8,7 +8,7 @@ A modern, glassmorphism-styled website for Cooperative Codebase - a New Orleans-
 - **Responsive Layout**: Optimized for all device sizes
 - **Interactive Elements**: Smooth hover animations and transitions
 - **Contact Form**: Integrated contact form for project inquiries
-- **Performance Optimized**: Built with Next.js 15 and optimized for speed
+- **Performance Optimized**: Built with Vite and React, optimized for speed
 
 ## 🎨 Design Elements
 
@@ -19,7 +19,7 @@ A modern, glassmorphism-styled website for Cooperative Codebase - a New Orleans-
 
 ## 🏗️ Tech Stack
 
-- **Framework**: Next.js 15 with App Router
+- **Framework**: React with Vite, React Router
 - **Styling**: Tailwind CSS with custom glassmorphism effects
 - **UI Components**: shadcn/ui component library
 - **Icons**: Lucide React icons
@@ -28,9 +28,15 @@ A modern, glassmorphism-styled website for Cooperative Codebase - a New Orleans-
 ## 📁 Project Structure
 
 ```
+├── index.html              # Entry HTML and static meta
+├── src/
+│   ├── main.tsx            # React entry, mounts App
+│   ├── App.tsx             # React Router routes
+│   └── vite-env.d.ts       # Vite client types
 ├── app/
-│   ├── layout.tsx          # Root layout with theme provider
 │   ├── page.tsx            # Main landing page
+│   ├── contact/page.tsx    # Contact page
+│   ├── verify/page.tsx     # Form test page
 │   └── globals.css         # Global styles and Tailwind imports
 ├── components/
 │   ├── ui/                 # shadcn/ui components
@@ -39,8 +45,9 @@ A modern, glassmorphism-styled website for Cooperative Codebase - a New Orleans-
 │   └── images/
 │       └── logo.png        # Cooperative Codebase logo
 ├── lib/
-│   └── utils.ts           # Utility functions
-└── tailwind.config.ts     # Tailwind configuration
+│   └── utils.ts            # Utility functions
+├── vite.config.ts          # Vite and path alias config
+└── tailwind.config.ts      # Tailwind configuration
 ```
 
 ## 🚀 Getting Started
@@ -83,7 +90,7 @@ pnpm build
 pnpm dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+6. Open [http://localhost:5173](http://localhost:5173) in your browser (Vite default port).
 
 ## 📄 Page Sections
 
@@ -156,7 +163,7 @@ Glass effects are achieved through:
 ### Content Updates
 
 - Update text content directly in `app/page.tsx`
-- Replace logo in `public/images/logo.png`
+- Add or replace the logo at `public/images/logo.png` (favicons, nav, and footer use this path; add this file before build/deploy to avoid broken images).
 - Modify contact form fields as needed
 
 ## 📱 Responsive Design
@@ -171,10 +178,10 @@ The website is fully responsive with breakpoints:
 
 ### Available Scripts
 
-- `pnpm dev` - Start development server
-- `pnpm build` - Build for production
-- `pnpm start` - Start production server
-- `pnpm lint` - Run ESLint
+- `pnpm dev` - Start development server (Vite)
+- `pnpm build` - Build for production (output in `dist/`)
+- `pnpm preview` - Preview production build locally
+- `pnpm lint` - Run TypeScript check (`tsc --noEmit`)
 
 ### Code Style
 
@@ -185,11 +192,13 @@ The website is fully responsive with breakpoints:
 
 ## 🌐 Deployment
 
-This project is optimized for deployment on Vercel:
+Build output is in `dist/`. Configure your host (Vercel, Netlify, etc.) to:
 
-1. Push code to GitHub repository
-2. Connect repository to Vercel
-3. Deploy automatically with each push
+- **Build command**: `pnpm build` (or `vite build`)
+- **Output/publish directory**: `dist`
+- **SPA fallback**: Serve `index.html` for all routes so React Router works
+
+The repo includes `public/_redirects` (for Netlify) and `vercel.json` (for Vercel) so SPA fallback is applied automatically on those hosts.
 
 ## 📞 Contact
 

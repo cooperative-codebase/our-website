@@ -1,21 +1,22 @@
-"use client";
-
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ContactFormReusable } from "@/components/ContactFormReusable";
-import {
-  ArrowRight,
-  CheckCircle,
-  Users,
-  Code,
-  Globe,
-  Shield,
-  Zap,
-} from "lucide-react";
+import { ArrowRight, Users, Code, Globe } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 export default function CooperativeCodebasePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-slate-900 to-black text-white relative overflow-hidden">
+    <>
+      <Helmet>
+        <title>Cooperative Codebase</title>
+        <meta name="description" content="Landing page for cooperativecodebase.com" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://cooperativecodebase.com/" />
+        <meta property="og:title" content="Cooperative Codebase" />
+        <meta property="og:description" content="Landing page for cooperativecodebase.com" />
+        <meta property="og:site_name" content="Cooperative Codebase" />
+        <meta property="og:image" content="https://cooperativecodebase.com/images/logo.png" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-black via-slate-900 to-black text-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)] pointer-events-none" />
       <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(59,130,246,0.05)_50%,transparent_75%)] pointer-events-none" />
@@ -29,11 +30,9 @@ export default function CooperativeCodebasePage() {
       <nav className="relative z-10 py-6 px-4">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
           <div className="backdrop-blur-md bg-black/30 border border-white/10 rounded-xl p-2">
-            <Image
+            <img
               src="/images/logo.png"
               alt="Cooperative Codebase Logo"
-              width={200}
-              height={80}
               className="h-16 w-auto"
             />
           </div>
@@ -266,6 +265,17 @@ export default function CooperativeCodebasePage() {
                   className="w-full h-full"
                 />
               </div>
+              <p className="mt-6 text-center">
+                <a
+                  href="https://solidarityecono.my"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-medium transition-colors"
+                >
+                  Visit solidarityecono.my
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+              </p>
             </div>
           </div>
         </div>
@@ -299,11 +309,9 @@ export default function CooperativeCodebasePage() {
           <div className="backdrop-blur-xl bg-black/40 border border-white/10 rounded-2xl p-8 shadow-2xl">
             <div className="mb-4">
               <div className="backdrop-blur-md bg-black/30 border border-blue-400/30 rounded-xl p-3 inline-block">
-                <Image
+                <img
                   src="/images/logo.png"
                   alt="Cooperative Codebase Logo"
-                  width={200}
-                  height={80}
                   className="h-10 w-auto"
                 />
               </div>
@@ -318,5 +326,6 @@ export default function CooperativeCodebasePage() {
         </div>
       </footer>
     </div>
+    </>
   );
 }
