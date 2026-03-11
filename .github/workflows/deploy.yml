@@ -28,6 +28,10 @@ jobs:
             SSH="sshpass -p $PASSWORD ssh -o StrictHostKeyChecking=no $USER@$HOST"
             echo "SSH=${SSH}" >> $GITHUB_ENV
 
+      - name: Update to latest main
+        shell: bash
+        run: $SSH "cd include/our-website; git pull origin main"
+
       - name: Install dependencies
         shell: bash
         run: $SSH "cd include/our-website; pnpm install"
